@@ -44,6 +44,7 @@ export async function POST(request: NextRequest) {
         newScore: team.score
       })
     }
+    // data correct
     
     return NextResponse.json({ 
       correct: false,
