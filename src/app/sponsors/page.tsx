@@ -2,8 +2,13 @@
 
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import { staticSponsors } from '@/lib/static-data'
 
 export default function Sponsors() {
+  const titleSponsors = staticSponsors.title
+  const associateSponsors = staticSponsors.associate
+  const regularSponsors = staticSponsors.regular
+
   return (
     <div>
       <Navbar />
@@ -15,7 +20,9 @@ export default function Sponsors() {
               Title Sponsor
             </h1>
             <div className="h-[200px] w-[300px] md:h-[300px] md:w-[450px] lg:h-[400px] lg:w-[630px]">
-              <img src="/images/benq.png" alt="BenQ" className="w-full h-full object-contain" />
+              {titleSponsors.map((sponsor) => (
+                <img key={sponsor._id} src={sponsor.logoUrl} alt={sponsor.name} className="w-full h-full object-contain" />
+              ))}
             </div>
           </div>
           <div className="absolute inset-0 md:relative md:inset-auto flex justify-end items-center opacity-20 md:opacity-100">
@@ -33,15 +40,11 @@ export default function Sponsors() {
               Associate Sponsors
             </h1>
             <div className="w-full max-w-xl grid grid-cols-2 gap-4 md:gap-8 justify-center items-center">
-              <div className="h-[100px] w-[150px] md:h-[120px] md:w-[200px] lg:h-[150px] lg:w-[250px]">
-                <img src="/images/sbi_logo.png" alt="SBI" className="w-full h-full object-contain" />
-              </div>
-              <div className="h-[100px] w-[150px] md:h-[120px] md:w-[200px] lg:h-[150px] lg:w-[250px]">
-                <img src="/images/canara.png" alt="Canara Bank" className="w-full h-full object-contain" />
-              </div>
-              <div className="h-[100px] w-[150px] md:h-[60px] md:w-[200px] lg:h-[80px] lg:w-[250px] col-span-2 justify-self-center">
-                <img src="/images/stockgro_logo.png" alt="StockGro" className="w-full h-full object-contain" />
-              </div>
+              {associateSponsors.map((sponsor) => (
+                <div key={sponsor._id} className="h-[100px] w-[150px] md:h-[120px] md:w-[200px] lg:h-[150px] lg:w-[250px]">
+                  <img src={sponsor.logoUrl} alt={sponsor.name} className="w-full h-full object-contain" />
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -53,18 +56,11 @@ export default function Sponsors() {
               Sponsors
             </h1>
             <div className="grid grid-cols-2 gap-4 md:gap-8">
-              <div className="h-[100px] w-[150px] md:h-[120px] md:w-[200px] lg:h-[150px] lg:w-[250px]">
-                <img src="/images/mother_diary_logo.png" alt="Mother Dairy" className="w-full h-full object-contain" />
-              </div>
-              <div className="h-[100px] w-[150px] md:h-[120px] md:w-[200px] lg:h-[100px] lg:w-[250px]">
-                <img src="/images/km_logo.png" alt="KM" className="w-full h-full object-contain" />
-              </div>
-              <div className="h-[60px] w-[150px] md:h-[120px] md:w-[200px] lg:h-[150px] lg:w-[250px]">
-                <img src="/images/ease_my_trip_logo.png" alt="EaseMyTrip" className="w-full h-full object-contain" />
-              </div>
-              <div className="h-[100px] w-[150px] md:h-[120px] md:w-[200px] lg:h-[150px] lg:w-[250px]">
-                <img src="/images/mey_mey_logo.png" alt="Mey Mey" className="w-full h-full object-contain" />
-              </div>
+              {regularSponsors.map((sponsor) => (
+                <div key={sponsor._id} className="h-[100px] w-[150px] md:h-[120px] md:w-[200px] lg:h-[150px] lg:w-[250px]">
+                  <img src={sponsor.logoUrl} alt={sponsor.name} className="w-full h-full object-contain" />
+                </div>
+              ))}
             </div>
           </div>
           <div className="absolute inset-0 md:relative md:inset-auto flex justify-end items-center opacity-20 md:opacity-100">

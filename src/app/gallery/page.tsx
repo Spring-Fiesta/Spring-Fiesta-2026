@@ -5,12 +5,13 @@ import { X, ChevronLeft, ChevronRight } from 'lucide-react'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import Carousel from '@/components/Carousel'
+import { staticGalleryImages } from '@/lib/static-data'
 
-// Generate images array - 30 images like original
-const images = Array.from({ length: 30 }, (_, i) => ({
-  id: i + 1,
-  src: `/images/gallerySlider/image${i + 1}.webp`,
-  alt: `image${i + 1}`,
+// Convert static gallery to expected format
+const images = staticGalleryImages.map(img => ({
+  id: img.order,
+  src: img.imageUrl,
+  alt: img.altText,
 }))
 
 export default function Gallery() {
@@ -78,26 +79,20 @@ export default function Gallery() {
       {selectedImage && (
         <div className="dialog-container" onClick={closeImage}>
           <div className="dialog-content" onClick={(e) => e.stopPropagation()}>
-            <div className="image-wrapper">
-              <button onClick={closeImage} className="close-btn" aria-label="Close">
-                <X size={20} />
-              </button>
-              <button onClick={prevImage} className="prev-btn" aria-label="Previous">
-                <ChevronLeft size={20} />
-              </button>
-              <img
-                src={selectedImage.src}
-                alt={selectedImage.alt}
-                className="selected-image"
-              />
-              <button onClick={nextImage} className="next-btn" aria-label="Next">
-                <ChevronRight size={20} />
-              </button>
-            </div>
+            <button className="dialog-close" onClick={closeImage}>
+              <X size={24} />
+            </button>
+            <button className="dialog-arrow dialog-arrow-left" onClick={prevImage}>
+              <ChevronLeft size={40} />
+            </button>
+            <img src={selectedImage.src} alt={selectedImage.alt} />
+            <button className="dialog-arrow dialog-arrow-right" onClick={nextImage}>
+              <ChevronRight size={40} />
+            </button>
           </div>
         </div>
       )}
-      <div className="mb-14" />
+
       <Footer />
     </div>
   )

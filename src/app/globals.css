@@ -11,6 +11,10 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   background: #23203C !important;
   font-family: 'Unbounded', sans-serif;
@@ -987,6 +991,8 @@ body::-webkit-scrollbar {
 
 .bg-wrapper {
   position: relative;
+  overflow-x: hidden;
+  min-height: 5800px;
 }
 
 .card-bg {
@@ -1011,6 +1017,11 @@ body::-webkit-scrollbar {
   color: white;
   text-align: center;
   width: 100%;
+  padding: 6rem 0 2rem 0;
+  margin-top: 200px;
+  background: #23203C;
+  position: relative;
+  z-index: 20;
 }
 
 /* Flip Card Positioning */
@@ -1270,4 +1281,21 @@ body::-webkit-scrollbar {
   .carousel-image-wrapper {
     animation-duration: 0.6s;
   }
+}
+
+/* Core Team - Dept Section */
+.dept {
+  color: white;
+  text-align: center;
+  width: 100%;
+  padding: 4rem 0 2rem 0;
+  background: #23203C;
+  position: relative;
+  z-index: 10;
+}
+
+.dept h4 {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
 }
