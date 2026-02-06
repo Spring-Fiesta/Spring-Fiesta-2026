@@ -1,0 +1,47 @@
+[
+    [
+        {
+            "time": "09:00AM - 12:00PM",
+            "title": "Corporate Crime",
+            "description": "",
+            
+            "link": "https://www.google.com"
+        },
+        {
+            "time": "12:00PM - 02:00PM",
+            "title": "Speed Code",
+            "description": "Code fast. Think smart. Win big! Get ready for the ultimate test of speed and problem-solving skills in the Speed Code Competition! Teams of 3 members will race against time to solve as many coding challenges as possible within the allotted time. The problems will range from basic logic puzzles to complex algorithmic challenges, pushing your coding abilities to the limit. 🔹 Teams of 3 will collaborate to solve coding problems. 🔹 Problems will cover a mix of logical, mathematical, and algorithmic challenges. 🔹 The competition will be hosted on an online coding platform. 🔹 Teams with the highest number of correct solutions in the shortest time will emerge as winners.",
+           
+            "link": "https://unstop.com/o/uvrqpbx?lb=RrLnVks"
+        },
+        {
+            "time": "2:00PM - 4:00PM",
+            "title": "Robo Soccer",
+            "description": "Gear up for the ultimate fusion of robotics and soccer! Robo Soccer challenges participants to design and control wired or wireless robots that can skillfully maneuver a ball (5-10 cm in diameter) across the arena and score goals in the opponent’s post. The team with the most goals within the time limit advances to the next round in this thrilling knockout competition! Task Details: Robots start from their designated positions and must navigate towards the opponent’s goal. The ball can be dragged, hit, or pushed—but not picked up. Score the maximum number of goals within the time limit to win. The event follows a knockout league format—each match determines the advancing team. The team with the most goals in a match moves to the next stage.",
+           
+            "link": "https://unstop.com/competitions/robosoccer-2025-spring-fiesta-indian-institute-of-information-technology-iiit-surat-1443154"
+        }
+    ],
+    [
+        {
+            "time": "05:00PM - 05:45PM",
+            "title": "Chief Guest",
+            "description": "",
+            "link":"https://www.google.com"
+        },
+        {
+            "time": "05:45PM - 09:30PM",
+            "title": "Cultural Night",
+            "description": "",
+           
+            "link": "https://www.google.com"
+        },
+        {
+            "time": "09:30PM - 11:00PM",
+            "title": "Band Night",
+            "description": "",
+            
+            "link": "https://www.google.com"
+        }
+    ]
+]
