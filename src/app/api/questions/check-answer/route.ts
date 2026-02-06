@@ -50,7 +50,7 @@ export async function POST(request: NextRequest) {
       correct: false,
       message: 'Wrong answer! Try again.'
     })
-  } catch (error) {
+  } catch (error) {   
     console.error('Check answer error:', error)
     return NextResponse.json({ error: 'Failed to check answer' }, { status: 500 })
   }
